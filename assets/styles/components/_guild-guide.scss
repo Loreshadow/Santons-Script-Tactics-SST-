@@ -24,6 +24,8 @@
   border: 4px solid $background-color;
   position: relative;
   overflow: hidden;
+  z-index: 1100; /* ensure avatar is above most overlays */
+  pointer-events: auto; /* allow clicks even if an overlay exists */
 
   &::before {
     content: '';
@@ -49,6 +51,7 @@
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid rgba(255, 255, 255, 0.3);
+  pointer-events: auto; /* ensure the image itself is clickable */
   }
 }
 
